@@ -4,6 +4,7 @@ public class Hotel implements Comparable<Hotel> {
     private String name;
     private float rate;
     private float weekendRate;
+    private int ratings;
 
     public String getName() {
         return name;
@@ -29,6 +30,13 @@ public class Hotel implements Comparable<Hotel> {
         this.weekendRate = weekendRate;
     }
 
+    public int getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(int ratings) {
+        this.ratings = ratings;
+    }
 
 
     @Override
@@ -36,9 +44,10 @@ public class Hotel implements Comparable<Hotel> {
         return "Hotel{" +
                 "name='" + name + '\'' +
                 ", rate=" + rate +
-                ", weekendRate=" + weekendRate +'}';
+                ", weekendRate=" + weekendRate +
+                ", ratings=" + ratings +
+                '}';
     }
-
 
     @Override
     public int compareTo(Hotel h) {

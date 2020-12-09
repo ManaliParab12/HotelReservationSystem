@@ -38,7 +38,6 @@ public class HotelManagementSystem {
         }
     };
 
-
     public Hotel findCheapestHotel(int numDays) {
         int lowestRate;
         Optional<Hotel> hotel = hotelList.stream()
