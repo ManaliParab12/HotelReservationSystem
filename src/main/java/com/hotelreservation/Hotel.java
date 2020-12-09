@@ -3,7 +3,7 @@ package com.hotelreservation;
 public class Hotel implements Comparable<Hotel> {
     private String name;
     private float rate;
-
+    private float weekendRate;
 
     public String getName() {
         return name;
@@ -21,13 +21,22 @@ public class Hotel implements Comparable<Hotel> {
         this.rate = rate;
     }
 
+    public float getWeekendRate() {
+        return weekendRate;
+    }
+
+    public void setWeekendRate(float weekendRate) {
+        this.weekendRate = weekendRate;
+    }
+
 
 
     @Override
     public String toString() {
         return "Hotel{" +
                 "name='" + name + '\'' +
-                ", rate=" + rate + '}';
+                ", rate=" + rate +
+                ", weekendRate=" + weekendRate +'}';
     }
 
 

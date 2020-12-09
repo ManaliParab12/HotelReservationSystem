@@ -39,8 +39,11 @@ public class Application {
         String name = scanner.next();
         System.out.println("Enter weekday rate ");
         float rate = scanner.nextFloat();
+        System.out.println("Enter weekend rate");
+        float weekendRate = scanner.nextFloat();
         hotel.setName(name);
         hotel.setRate(rate);
+        hotel.setWeekendRate(weekendRate);
         hotelManagementSystem.hotelList.add(hotel);
         System.out.println(hotelManagementSystem.hotelList);
     }
