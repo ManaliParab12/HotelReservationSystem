@@ -105,6 +105,10 @@ public class Application {
                 bestRatedList.add(hotel);
             }
         }
+<<<<<<< HEAD
+=======
+        System.out.println("\n All the hotels with best rating are  :" + bestRatedList + "\n");
+>>>>>>> UC7_findBestRatedHotel
         System.out.println("You can choose any 1 of this Best rated hotels having cheapest cost: \n");
         bestRatedList.stream();
             bestRatedList.sort(Comparator.comparing(Hotel::getRate));
