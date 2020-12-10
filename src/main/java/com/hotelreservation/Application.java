@@ -50,10 +50,18 @@ public class Application {
         float weekendRate = scanner.nextFloat();
         System.out.println("Enter Ratings of hotel");
         int ratings = scanner.nextInt();
+        System.out.println("Enter weekday rate for Reward Customer ");
+        float rateForRewardCustomer = scanner.nextFloat();
+        System.out.println("Enter weekend rate for Reward Customer");
+        float weekendRateForRewardCustomer = scanner.nextFloat();
+
         hotel.setName(name);
         hotel.setRate(rate);
         hotel.setWeekendRate(weekendRate);
         hotel.setRatings(ratings);
+        hotel.setRateForRewardCustomer(rateForRewardCustomer);
+        hotel.setWeekendRateForRewardCustomer(weekendRateForRewardCustomer);
+        
         hotelManagementSystem.hotelList.add(hotel);
         System.out.println(hotelManagementSystem.hotelList);
     }
@@ -105,10 +113,8 @@ public class Application {
                 bestRatedList.add(hotel);
             }
         }
-<<<<<<< HEAD
-=======
         System.out.println("\n All the hotels with best rating are  :" + bestRatedList + "\n");
->>>>>>> UC7_findBestRatedHotel
+
         System.out.println("You can choose any 1 of this Best rated hotels having cheapest cost: \n");
         bestRatedList.stream();
             bestRatedList.sort(Comparator.comparing(Hotel::getRate));
